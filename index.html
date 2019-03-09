@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Train Schedule</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>    
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/c99ec62ba2.js"></script>
+
+    <style>
+      body {background-image: url("assets/images/traintracks.jpg");}
+    </style>
+</head>
+
+<body>
+
+<!-- header -->
+    <div class="container jumbotron bg-secondary text-center my-3 text-light">
+        <div class="row">
+            <div class="col-12">
+                <h1><i class="fa fa-train" aria-hidden="true"></i> Anytime is Train Time <i class="fa fa-clock-o" aria-hidden="true"></i></h1>
+                <h3>Current Time: <span id="current-time"></span></h3>
+            </div>
+        </div>
+    </div>
+
+<!-- display train schedule -->
+    <div class="container px-0 py-0">
+        <div class="card border-secondary mb-3">
+            <div class="card-header text-white" style="background-color: #337ab7;"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> <strong>Train Schedules</strong></div>
+            <div class="card-body text-secondary">
+                
+
+
+            <!-- heading for table -->
+            <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                      </tr>
+                    </thead>
+
+            <!-- main content to be loaded -->      
+                    <tbody class="train-text">                  
+    
+                    </tbody>
+                  </table>
+
+            <!-- end of table -->
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- input card -->
+
+<div class="container px-0 py-0">
+        <div class="card border-secondary mb-5">
+            <div class="card-header text-white" style="background-color: #337ab7;"><i class="fa fa-plus-square" aria-hidden="true"></i> <strong>Add Train</strong></div>
+            <div class="card-body text-secondary">
+                
+            <!-- Input details -->
+
+            <!-- Entry Form -->
+            <form>
+                <div class="form-group">
+                <label for="train-name">Train Name</label>
+                <input class="form-control" id="train-name" placeholder="Train Name" type="text">
+                </div>
+                <div class="form-group">
+                <label for="destination-text">Destination</label>
+                <input class="form-control" id="destination-text" placeholder="Destination" type="text">
+                </div>
+                <div class="form-group">
+                <label for="train-time">First Train Time (HH:MM Military Time)</label>
+                <input class="form-control" id="train-time" placeholder="HH:MM" type="text">
+                </div>
+                <div class="form-group">
+                <label for="frequency-text">Frequency (min)</label>
+                <input class="form-control" id="frequency-text" placeholder="minutes" type="text">
+                </div>
+                <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
+            </form>
+
+
+            
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+
+<!-- javascript file link -->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+
+
+</body>
+</html>
