@@ -21,18 +21,28 @@
     <script src="https://use.fontawesome.com/c99ec62ba2.js"></script>
 
     <style>
-      body {background-image: url("assets/images/traintracks.jpg");}
+        body {background-color: #555;}
+
+        .coverbg {background-image: url("assets/images/traintracks.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center; }
+
+        .txtBorderColor {text-shadow: 0 0 20px rgb(57, 103, 255);
+        -moz-text-shadow: 0 0 20px rgb(57, 103, 255);
+        -webkit-text-shadow: 0 0 20px rgb(57, 103, 255);}
+
     </style>
 </head>
 
 <body>
 
 <!-- header -->
-    <div class="container jumbotron bg-secondary text-center my-3 text-light">
+    <div class="container jumbotron bg-secondary text-center my-3 text-light coverbg">
         <div class="row">
             <div class="col-12">
-                <h1><i class="fa fa-train" aria-hidden="true"></i> Anytime is Train Time <i class="fa fa-clock-o" aria-hidden="true"></i></h1>
-                <h3>Current Time: <span id="current-time"></span></h3>
+                <h1 class="txtBorderColor"><i class="fa fa-train" aria-hidden="true"></i> Anytime is Train Time <i class="fa fa-clock-o" aria-hidden="true"></i></h1>
+                <h3 class="txtBorderColor">Current Time: <span id="current-time"></span></h3>
             </div>
         </div>
     </div>
@@ -99,7 +109,7 @@
                 <label for="frequency-text">Frequency (min)</label>
                 <input class="form-control" id="frequency-text" placeholder="minutes" type="text">
                 </div>
-                <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
+                <button class="btn btn-outline-primary float-left" id="add-employee-btn">Submit</button>
             </form>
 
 
