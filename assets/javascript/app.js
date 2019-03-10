@@ -25,6 +25,9 @@ $(".btn").on("click", function(event) {
   var trainTime = $("#train-time").val().trim();
   var frequency = $("#frequency-text").val().trim();
 
+  if (trainName == "" || destinationT == "" || trainTime == "" || frequency == "") {
+    return false;
+  } else {
   //push data to firebase
   database.ref().push({
     trainName: trainName,
@@ -38,7 +41,8 @@ $(".btn").on("click", function(event) {
   $("#destination-text").val("");
   $("#train-time").val("");
   $("#frequency-text").val("");
-
+  }
+  
 });
 
 
